@@ -13,4 +13,8 @@ Start-app:
 
     - python manage.py startapp <appname>
 
+DataBase:
+    - database commands
+
+    - python manage.py migrate
  
