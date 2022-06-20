@@ -17,4 +17,10 @@ DataBase:
     - database commands
 
     - python manage.py migrate
- 
+    - python manage.py makemigrations
+
+Create-Super-user:
+    - superuser command
+
+    - python manage.py createsuperuser
+
