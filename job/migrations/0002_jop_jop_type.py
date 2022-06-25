@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='jop',
+            model_name='job',
             name='jop_type',
             field=models.CharField(choices=[('FULL_TIME', 'FULL_TIME'), ('PART_TIME', 'PART_TIME')], default='', max_length=15),
             preserve_default=False,

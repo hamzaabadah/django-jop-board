@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='jop',
+            model_name='job',
             name='description',
             field=models.TextField(default='', max_length=1000),
             preserve_default=False,
