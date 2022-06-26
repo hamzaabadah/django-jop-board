@@ -24,3 +24,6 @@ Create-Super-user:
 
     - python manage.py createsuperuser
 
+Pillow installed for images
+
+    - python -m pip install Pillow

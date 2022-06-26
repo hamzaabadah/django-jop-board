@@ -1,9 +1,14 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
 JOP_TYPE = [
     ('FULL_TIME', 'FULL_TIME'),
     ('PART_TIME', 'PART_TIME'),
 ]
+
+
+def image_upload(instance, filename):
+    image_name, extinction = filename.split(".")
 
 
 # Create your models here.
@@ -17,9 +22,11 @@ class Jop(models.Model):
     salary = models.IntegerField(default=0)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     experience = models.IntegerField(default=1)
+    image = models.ImageField(upload_to='jobs/')
+    job_img = models.FileField(upload_to='jobs/', validators=[FileExtensionValidator(['pdf', 'doc', 'svg'])])
 
     def __str__(self):
-        return self.title + ", " + self.jop_type
+        return self.title
 
 
 class Category(models.Model):

@@ -9,3 +9,8 @@ Django model fields
     - Html widget
     - Validation 
     - db size
+
+Static files:
+
+    - static files: [frontend] images, css, javascript 
+    - media fiels: [uplod] images
