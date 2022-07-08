@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.utils.text import slugify
@@ -14,6 +15,7 @@ def image_upload(instance, filename):
 
 # Create your models here.
 class Jop(models.Model):
+    owner = models.ForeignKey(User, related_name='job_owner', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     # location
     jop_type = models.CharField(max_length=15, choices=JOP_TYPE)
